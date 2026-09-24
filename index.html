@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b5ed7"><link rel="manifest" href="manifest.json"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="visual.css"><title>Conferência Patrimonial</title></head>
+<body>
+<section id="loginView" class="screen center"><div class="card">
+<h1>Conferência Patrimonial</h1><p>Entre para iniciar ou continuar.</p>
+<form id="loginForm"><label>E-mail</label><input id="email" type="email" autocomplete="username" required>
+<label>Senha</label><input id="password" type="password" autocomplete="current-password" required>
+<button class="primary full">Entrar</button><div id="loginMessage" class="message"></div></form>
+</div></section>
+<section id="mainView" class="screen hidden">
+<header><div><b>Conferência Patrimonial</b><small id="userEmail"></small></div><button id="logoutBtn">Sair</button></header>
+<main>
+<div class="counter"><span>Dispositivos encontrados</span><strong id="counter">0/177</strong></div>
+<section id="checkPanel" class="card"><h2>Conferir Tombo</h2>
+<form id="checkForm"><input id="tomboInput" inputmode="numeric" autocomplete="off" placeholder="Digite os 4 últimos dígitos" required><button id="searchBtn" class="primary" type="submit">Pesquisar</button></form>
+<div id="checkMessage" class="message"></div>
+<button id="confirmBtn" class="confirm hidden" type="button">Confirmar encontrado</button></section>
+<section id="listPanel" class="card hidden"><div class="title"><h2 id="listTitle"></h2><b id="listCount">0</b></div><ul id="itemsList"></ul></section>
+</main>
+<nav><button data-view="check" class="active">Conferir</button><button data-view="done">Conferidos</button><button data-view="pending">Pendentes</button></nav>
+</section>
+<script type="module" src="app.js"></script></body></html>
